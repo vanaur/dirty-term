@@ -45,6 +45,6 @@ int main()
 }
 ```
 
-## The limits of lib
+## The limits of lib and remarks
 
-User input is retrieved via `input.input` and the size of the input via `input.len` where `input` is of type `struct dtinput_t`. The prompt can be modified to display the characters you want (see example). The maximum size of the entry is arbitrarily set to 250 characters, but you can change this in the lib. Once this limit is exceeded, the input does not wait for anything else and returns its result normally. Auto-completion is limited to the last **word** entered by the user, i.e. the last character sequence separated by a space.
+User input is retrieved via `input.input` and the size of the input via `input.len` where `input` is of type `struct dtinput_t`. The prompt can be modified to display the characters you want (see example). The maximum size of the entry is arbitrarily set to 250 characters, but you can change this in the lib. Once this limit is exceeded, the input does not wait for anything else and returns its result normally. Auto-completion is limited to the last **word** entered by the user, i.e. the last character sequence separated by a space. The lib wasn't designed for speed, anyway, unless your user is writing at 10000000 wpm, you shouldn't care.
